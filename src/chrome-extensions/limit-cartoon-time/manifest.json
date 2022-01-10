@@ -1,0 +1,21 @@
+﻿{
+	"name": "Limit Cartoon time",
+	"version": "2.0",
+	"manifest_version": 2,
+	"description": "限制Cartoon time",
+	"browser_action": {
+		"default_icon": "wall.ico",
+		"popup": "popup.html" 
+	},
+	"content_scripts": [ {
+		"exclude_globs": [  ],
+		"include_globs": [  ],
+		"js": ["./lib/vue.js", "parser.js","index.js"],
+		"matches": [ "http://*/*", "https://*/*" ],
+		"run_at": "document_idle"
+	} ],
+	"permissions": [
+		"storage"
+	],
+	"converted_from_user_script": true
+}
